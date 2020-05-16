@@ -18,7 +18,8 @@ namespace EFCoreWebApi.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Password=root;Persist Security Info=True;User ID=sa;Initial Catalog=HeroiApi;Data Source=localhost\\SQLEXPRESS");
+            //optionsBuilder.UseSqlServer("Password=root;Persist Security Info=True;User ID=sa;Initial Catalog=HeroiApi;Data Source=localhost\\SQLEXPRESS");
+            optionsBuilder.UseSqlServer("data source=localhost\\SQLEXPRESS;initial catalog=HeroiApi;persist security info=True;user id=sa;password=root;MultipleActiveResultSets=True;App=EntityFramework");
 
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
